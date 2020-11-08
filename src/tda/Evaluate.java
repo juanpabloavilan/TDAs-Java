@@ -16,27 +16,12 @@ public class Evaluate {
     /**
      * @param args the command line arguments
      */
+
     public static void main(String[] args) {
-        DoublyLinkedList<String> prueba = new DoublyLinkedList<>();
-        prueba.addFirst("hi");
-        for (int i = 0; i < 20; i++) {
-            prueba.add(i, "Hola" + i);
-        }
-        prueba.addFirst("p");
-        prueba.add(5, "Entrometido");
-        for (String s : prueba) {
-            System.out.println(s);
-        }
-        
-        System.out.println(" ");
-        for (int i = prueba.size()-1; i > 0; i--) {
-            System.out.println(prueba.remove(i));
-        }
-        
-        System.out.println("Removiendo");
-        System.out.println("");
-         for (String s : prueba) {
-            System.out.println(s);
+        Integer inte[] = {200, 10, -1, -20, 70, 800, -100, 5, 2, 0};
+        MinPQ<Integer> hola = new MinPQ<>(inte);
+        while (!hola.isEmpty()) {            
+            System.out.println(hola.delMin());
         }
         
         
